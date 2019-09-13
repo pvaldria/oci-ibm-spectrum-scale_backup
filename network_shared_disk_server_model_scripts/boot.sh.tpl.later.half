@@ -1,0 +1,165 @@
+
+
+## To be ran on 1 of the nodes of the cluster.  We will assume node1.
+
+echo "$thisHost" | grep -q -w $installerNode
+if [ $? -eq 0 ] ; then
+
+echo $IBMSSVERSION
+
+cd /tmp
+wget  "$SOFTWAREDOWNLOADURL"
+
+while [ $? -ne 0 ]; do
+  rm -rf /tmp/Scale_dme_install-${IBMSSVERSION}_x86_64.tar
+  wget  "$SOFTWAREDOWNLOADURL"
+done
+
+while [ ! -f /tmp/Scale_dme_install-${IBMSSVERSION}_x86_64.tar ];
+do
+        sleep 5s
+        echo "Waiting for file to download"
+done
+
+
+tar -xvf /tmp/Scale_dme_install-${IBMSSVERSION}_x86_64.tar
+
+./Spectrum_Scale_Data_Management-${IBMSSVERSION}-x86_64-Linux-install --silent
+
+cd /usr/lpp/mmfs/${IBMSSVERSION}/installer/
+
+
+./spectrumscale setup -s `hostname -i` -i /root/.ssh/id_rsa
+
+for x in `cat /tmp/adminnodehosts` ; do
+	# Add Admin Nodes
+	./spectrumscale -v  node add $x -a
+done ;
+
+ct=1
+for x in `cat /tmp/clientnodehosts` ; do
+                if [ $ct -eq 1 ]; then
+			# Make the first compute node to be a quorum node and nsd, so we can have descOnly disk on it.
+			./spectrumscale -v  node add $x -n -q
+                        # Add desc only 50GB block volume.
+                        ./spectrumscale -v nsd add /dev/sdb -p $x -fs fs1 -fg 5 -u descOnly
+		else
+			# Add Client/Compute Nodes
+        		./spectrumscale -v  node add $x
+                fi
+	ct=$((ct+1));
+done ;
+
+
+for x in `cat /tmp/nsdnodehosts` ; do
+        # Add NSD Nodes
+        ./spectrumscale -v  node add $x -n -q -m
+done ;
+
+for x in `cat /tmp/guinodehosts` ; do
+        # Add GUI Nodes
+        ./spectrumscale -v  node add $x -g
+done ;
+
+# callhome setup
+#./spectrumscale node add -c `head -n 1 /tmp/adminnodehosts`
+#echo "accept" | ./spectrumscale callhome config -n "$COMPANYNAME" -i "$COMPANYID" -e "$EMAILADDRESS" -cn "$COUNTRYCODE"
+./spectrumscale callhome disable
+
+./spectrumscale config gpfs -c ibmss
+
+## To see the list of Nodes and their configuration
+./spectrumscale node list
+
+
+
+echo "DISKPERNODE=$DISKPERNODE"
+echo "DATAREPLICA=$DATAREPLICA"
+echo "nsdNodeCount=$nsdNodeCount"
+echo "nsdNodeCount*DISKPERNODE = $((nsdNodeCount*DISKPERNODE))"
+
+index=0
+fg=-1
+u="dataAndMetadata";
+nodect=0
+file="/tmp/nsdnodehosts"
+len=`less $file | wc -l`
+for disk in `ls /dev/oracleoci/oraclevd* | grep -v "oraclevda\|oraclevda[1-3]"  | grep -v "[0-9]$"` ;
+do
+echo "disk=$disk"
+  primaryServerIndex=$((index % nsdNodeCount))
+  if [ $DATAREPLICA -eq 1 ]; then
+     if [ $((primaryServerIndex % 2)) -eq 0 ]; then fg=0; else fg=1; fi
+     else
+        echo "Multi-AD setup... add logic"
+     fi
+
+if [ $primaryServerIndex -eq $((nsdNodeCount-1)) ]; then
+     secondaryServer=`head -n 1 $file`;
+     primaryServer=`tail -n 1 $file`;
+
+   else
+     primaryServer=`head -n $((primaryServerIndex+1)) $file | tail -n 1`;
+     secondaryServer=`head -n $((primaryServerIndex+2)) $file | tail -n 1`;
+   fi
+echo "index=$index"
+echo "primaryServer=$primaryServer"
+echo "secondaryServer=$secondaryServer"
+index=$((index+1))
+nodect=$((nodect+1))
+./spectrumscale -v nsd add $disk -p $primaryServer -fs fs1 -fg $fg -u $u -s $secondaryServer
+
+done
+
+
+
+
+
+
+## Update the Block Size to 256K and change mount point to /gpfs/gpfs1
+./spectrumscale filesystem modify fs1 -B $BLOCKSIZE -m $GPFSMOUNTPOINT -MR 2 -R 2 -r $DATAREPLICA -mr $METADATAREPLICA
+
+./spectrumscale config gpfs --ephemeral_port_range 60000-61000
+
+## To see the list of NSDs
+./spectrumscale nsd list
+
+## To see the filesystem list
+./spectrumscale filesystem list
+
+
+# Do this first or else the below loop will wait infinitely.
+# touch /tmp/complete
+
+index=0;
+for x_fqdn in `cat /tmp/allnodehosts` ; do
+  if [ $index -eq 0 ]; then
+    echo "skip checking on current node - $x_fqdn"
+  else
+	while [ ! `ssh $x_fqdn "if [ -f /tmp/complete ]; then echo \"true\"; else echo \"false\" ; fi"` = "true" ]; do
+	sleep 20s;
+	done;
+  fi
+  index=$((index+1))
+done;
+
+# Only do touch after checking on all other machines. To avoid the above loop from waiting for current node,  it has been skipped.
+touch /tmp/complete
+
+
+exit 0
+
+
+# ntp
+# ./spectrumscale config ntp -e on -s 10.0.2.8,10.0.2.6
+
+
+else
+	# To indicate on rest of the nodes,  that boot cloud init is complete.
+	touch /tmp/complete
+# end if loop
+fi
+
+
+echo "boot.sh.tpl setup complete"
+set +x

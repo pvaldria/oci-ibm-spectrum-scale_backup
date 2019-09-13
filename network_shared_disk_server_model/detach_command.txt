@@ -1,0 +1,270 @@
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:abf9f02a-8c40-4454-b3c1-71fbe1d84c57 -p 169.254.2.12:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:abf9f02a-8c40-4454-b3c1-71fbe1d84c57 -p 169.254.2.12:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:63ef97f9-afa2-4a3a-9ccc-47d8c933e1dd -p 169.254.2.19:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:63ef97f9-afa2-4a3a-9ccc-47d8c933e1dd -p 169.254.2.19:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8f5a0417-9446-4a64-aaa1-647caf905d0a -p 169.254.2.11:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8f5a0417-9446-4a64-aaa1-647caf905d0a -p 169.254.2.11:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e5bf722b-8d06-4641-9322-ca34bcaa26c8 -p 169.254.2.7:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e5bf722b-8d06-4641-9322-ca34bcaa26c8 -p 169.254.2.7:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e43f8f7f-c6a7-47e6-a95b-07f330a04a2a -p 169.254.2.15:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e43f8f7f-c6a7-47e6-a95b-07f330a04a2a -p 169.254.2.15:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:dcbcb1c8-375e-43ce-be0c-2be8aeef6f85 -p 169.254.2.10:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:dcbcb1c8-375e-43ce-be0c-2be8aeef6f85 -p 169.254.2.10:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:55b8ba88-3201-4819-8239-507fa5732314 -p 169.254.2.8:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:55b8ba88-3201-4819-8239-507fa5732314 -p 169.254.2.8:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:89b4f800-a068-4a7f-953c-3c2800647f37 -p 169.254.2.20:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:89b4f800-a068-4a7f-953c-3c2800647f37 -p 169.254.2.20:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:92dd8789-d008-4273-adb4-16b3194d7ac1 -p 169.254.2.6:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:92dd8789-d008-4273-adb4-16b3194d7ac1 -p 169.254.2.6:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e5f3fe41-b1fd-43fd-966f-29185821873f -p 169.254.2.16:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e5f3fe41-b1fd-43fd-966f-29185821873f -p 169.254.2.16:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7241bd65-58c2-4380-9dad-f540bcb9a3e9 -p 169.254.2.21:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7241bd65-58c2-4380-9dad-f540bcb9a3e9 -p 169.254.2.21:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:21113a2e-6f97-4c76-a8e4-82d38a41301a -p 169.254.2.28:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:21113a2e-6f97-4c76-a8e4-82d38a41301a -p 169.254.2.28:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7793bd9c-85c9-4576-838a-9faee7cb3080 -p 169.254.2.23:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7793bd9c-85c9-4576-838a-9faee7cb3080 -p 169.254.2.23:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:2713485f-6172-45c8-a8e7-708878b56e82 -p 169.254.2.26:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:2713485f-6172-45c8-a8e7-708878b56e82 -p 169.254.2.26:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:51165007-d703-40d3-aaab-aeec56eb666d -p 169.254.2.22:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:51165007-d703-40d3-aaab-aeec56eb666d -p 169.254.2.22:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7235c1c1-5fcb-4e99-911f-794044fb3556 -p 169.254.2.3:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7235c1c1-5fcb-4e99-911f-794044fb3556 -p 169.254.2.3:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8d8b3638-1a03-421e-8608-407ce719287e -p 169.254.2.9:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8d8b3638-1a03-421e-8608-407ce719287e -p 169.254.2.9:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8471eb5a-6975-4c68-8200-2b55efe2de4d -p 169.254.2.2:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8471eb5a-6975-4c68-8200-2b55efe2de4d -p 169.254.2.2:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:d5cc28dd-30ec-488e-83fb-1688e2e19559 -p 169.254.2.4:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:d5cc28dd-30ec-488e-83fb-1688e2e19559 -p 169.254.2.4:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:0efd7f6b-332a-4993-82be-89a9df6aebbc -p 169.254.2.13:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:0efd7f6b-332a-4993-82be-89a9df6aebbc -p 169.254.2.13:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:61898e60-b90c-4036-9ba3-565dfbf7e8e5 -p 169.254.2.27:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:61898e60-b90c-4036-9ba3-565dfbf7e8e5 -p 169.254.2.27:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:52bb47b1-0c52-4afa-9797-c997d493a54e -p 169.254.2.18:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:52bb47b1-0c52-4afa-9797-c997d493a54e -p 169.254.2.18:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8fb7001c-82f3-48ea-8ae8-f656c6c90f5d -p 169.254.2.14:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8fb7001c-82f3-48ea-8ae8-f656c6c90f5d -p 169.254.2.14:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:6fee1622-63fb-4b74-b0e7-f4829e01216e -p 169.254.2.31:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:6fee1622-63fb-4b74-b0e7-f4829e01216e -p 169.254.2.31:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:c6746295-3bca-4187-aa3e-a3c2335fd2d3 -p 169.254.2.29:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:c6746295-3bca-4187-aa3e-a3c2335fd2d3 -p 169.254.2.29:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:aabb68c7-1792-4d88-9889-f6a43dce9772 -p 169.254.2.25:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:aabb68c7-1792-4d88-9889-f6a43dce9772 -p 169.254.2.25:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:23cb4a14-a1de-49ad-ae2f-43a13b57486a -p 169.254.2.24:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:23cb4a14-a1de-49ad-ae2f-43a13b57486a -p 169.254.2.24:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:2a9fceb0-e4d2-4078-8928-b440b663d58a -p 169.254.2.30:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:2a9fceb0-e4d2-4078-8928-b440b663d58a -p 169.254.2.30:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:428d11aa-7b4f-4531-8340-8fbb1e95b1e5 -p 169.254.2.5:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:428d11aa-7b4f-4531-8340-8fbb1e95b1e5 -p 169.254.2.5:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:672f71cb-d11c-478f-b70b-ed9e24afa13d -p 169.254.2.17:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:672f71cb-d11c-478f-b70b-ed9e24afa13d -p 169.254.2.17:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7235c1c1-5fcb-4e99-911f-794044fb3556 -p 169.254.2.27:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7235c1c1-5fcb-4e99-911f-794044fb3556 -p 169.254.2.27:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:51165007-d703-40d3-aaab-aeec56eb666d -p 169.254.2.8:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:51165007-d703-40d3-aaab-aeec56eb666d -p 169.254.2.8:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:52bb47b1-0c52-4afa-9797-c997d493a54e -p 169.254.2.18:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:52bb47b1-0c52-4afa-9797-c997d493a54e -p 169.254.2.18:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:21113a2e-6f97-4c76-a8e4-82d38a41301a -p 169.254.2.20:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:21113a2e-6f97-4c76-a8e4-82d38a41301a -p 169.254.2.20:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:aabb68c7-1792-4d88-9889-f6a43dce9772 -p 169.254.2.4:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:aabb68c7-1792-4d88-9889-f6a43dce9772 -p 169.254.2.4:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:428d11aa-7b4f-4531-8340-8fbb1e95b1e5 -p 169.254.2.22:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:428d11aa-7b4f-4531-8340-8fbb1e95b1e5 -p 169.254.2.22:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:55b8ba88-3201-4819-8239-507fa5732314 -p 169.254.2.29:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:55b8ba88-3201-4819-8239-507fa5732314 -p 169.254.2.29:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:2a9fceb0-e4d2-4078-8928-b440b663d58a -p 169.254.2.7:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:2a9fceb0-e4d2-4078-8928-b440b663d58a -p 169.254.2.7:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:23cb4a14-a1de-49ad-ae2f-43a13b57486a -p 169.254.2.15:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:23cb4a14-a1de-49ad-ae2f-43a13b57486a -p 169.254.2.15:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8d8b3638-1a03-421e-8608-407ce719287e -p 169.254.2.23:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8d8b3638-1a03-421e-8608-407ce719287e -p 169.254.2.23:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:c6746295-3bca-4187-aa3e-a3c2335fd2d3 -p 169.254.2.9:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:c6746295-3bca-4187-aa3e-a3c2335fd2d3 -p 169.254.2.9:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:abf9f02a-8c40-4454-b3c1-71fbe1d84c57 -p 169.254.2.3:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:abf9f02a-8c40-4454-b3c1-71fbe1d84c57 -p 169.254.2.3:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:672f71cb-d11c-478f-b70b-ed9e24afa13d -p 169.254.2.25:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:672f71cb-d11c-478f-b70b-ed9e24afa13d -p 169.254.2.25:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e5f3fe41-b1fd-43fd-966f-29185821873f -p 169.254.2.24:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e5f3fe41-b1fd-43fd-966f-29185821873f -p 169.254.2.24:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:dcbcb1c8-375e-43ce-be0c-2be8aeef6f85 -p 169.254.2.10:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:dcbcb1c8-375e-43ce-be0c-2be8aeef6f85 -p 169.254.2.10:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:2713485f-6172-45c8-a8e7-708878b56e82 -p 169.254.2.5:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:2713485f-6172-45c8-a8e7-708878b56e82 -p 169.254.2.5:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7793bd9c-85c9-4576-838a-9faee7cb3080 -p 169.254.2.11:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7793bd9c-85c9-4576-838a-9faee7cb3080 -p 169.254.2.11:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7241bd65-58c2-4380-9dad-f540bcb9a3e9 -p 169.254.2.13:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7241bd65-58c2-4380-9dad-f540bcb9a3e9 -p 169.254.2.13:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:92dd8789-d008-4273-adb4-16b3194d7ac1 -p 169.254.2.28:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:92dd8789-d008-4273-adb4-16b3194d7ac1 -p 169.254.2.28:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8471eb5a-6975-4c68-8200-2b55efe2de4d -p 169.254.2.14:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8471eb5a-6975-4c68-8200-2b55efe2de4d -p 169.254.2.14:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:61898e60-b90c-4036-9ba3-565dfbf7e8e5 -p 169.254.2.6:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:61898e60-b90c-4036-9ba3-565dfbf7e8e5 -p 169.254.2.6:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:6fee1622-63fb-4b74-b0e7-f4829e01216e -p 169.254.2.31:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:6fee1622-63fb-4b74-b0e7-f4829e01216e -p 169.254.2.31:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:89b4f800-a068-4a7f-953c-3c2800647f37 -p 169.254.2.16:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:89b4f800-a068-4a7f-953c-3c2800647f37 -p 169.254.2.16:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:63ef97f9-afa2-4a3a-9ccc-47d8c933e1dd -p 169.254.2.17:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:63ef97f9-afa2-4a3a-9ccc-47d8c933e1dd -p 169.254.2.17:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8fb7001c-82f3-48ea-8ae8-f656c6c90f5d -p 169.254.2.19:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8fb7001c-82f3-48ea-8ae8-f656c6c90f5d -p 169.254.2.19:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:d5cc28dd-30ec-488e-83fb-1688e2e19559 -p 169.254.2.21:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:d5cc28dd-30ec-488e-83fb-1688e2e19559 -p 169.254.2.21:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e5bf722b-8d06-4641-9322-ca34bcaa26c8 -p 169.254.2.30:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e5bf722b-8d06-4641-9322-ca34bcaa26c8 -p 169.254.2.30:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8f5a0417-9446-4a64-aaa1-647caf905d0a -p 169.254.2.2:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8f5a0417-9446-4a64-aaa1-647caf905d0a -p 169.254.2.2:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:0efd7f6b-332a-4993-82be-89a9df6aebbc -p 169.254.2.12:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:0efd7f6b-332a-4993-82be-89a9df6aebbc -p 169.254.2.12:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e43f8f7f-c6a7-47e6-a95b-07f330a04a2a -p 169.254.2.26:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e43f8f7f-c6a7-47e6-a95b-07f330a04a2a -p 169.254.2.26:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:63ef97f9-afa2-4a3a-9ccc-47d8c933e1dd -p 169.254.2.5:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:63ef97f9-afa2-4a3a-9ccc-47d8c933e1dd -p 169.254.2.5:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:52bb47b1-0c52-4afa-9797-c997d493a54e -p 169.254.2.16:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:52bb47b1-0c52-4afa-9797-c997d493a54e -p 169.254.2.16:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:c6746295-3bca-4187-aa3e-a3c2335fd2d3 -p 169.254.2.13:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:c6746295-3bca-4187-aa3e-a3c2335fd2d3 -p 169.254.2.13:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:55b8ba88-3201-4819-8239-507fa5732314 -p 169.254.2.9:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:55b8ba88-3201-4819-8239-507fa5732314 -p 169.254.2.9:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8f5a0417-9446-4a64-aaa1-647caf905d0a -p 169.254.2.26:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8f5a0417-9446-4a64-aaa1-647caf905d0a -p 169.254.2.26:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:2713485f-6172-45c8-a8e7-708878b56e82 -p 169.254.2.18:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:2713485f-6172-45c8-a8e7-708878b56e82 -p 169.254.2.18:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:2a9fceb0-e4d2-4078-8928-b440b663d58a -p 169.254.2.14:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:2a9fceb0-e4d2-4078-8928-b440b663d58a -p 169.254.2.14:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:abf9f02a-8c40-4454-b3c1-71fbe1d84c57 -p 169.254.2.4:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:abf9f02a-8c40-4454-b3c1-71fbe1d84c57 -p 169.254.2.4:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8d8b3638-1a03-421e-8608-407ce719287e -p 169.254.2.15:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8d8b3638-1a03-421e-8608-407ce719287e -p 169.254.2.15:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8fb7001c-82f3-48ea-8ae8-f656c6c90f5d -p 169.254.2.17:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8fb7001c-82f3-48ea-8ae8-f656c6c90f5d -p 169.254.2.17:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:428d11aa-7b4f-4531-8340-8fbb1e95b1e5 -p 169.254.2.6:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:428d11aa-7b4f-4531-8340-8fbb1e95b1e5 -p 169.254.2.6:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:6fee1622-63fb-4b74-b0e7-f4829e01216e -p 169.254.2.28:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:6fee1622-63fb-4b74-b0e7-f4829e01216e -p 169.254.2.28:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7241bd65-58c2-4380-9dad-f540bcb9a3e9 -p 169.254.2.19:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7241bd65-58c2-4380-9dad-f540bcb9a3e9 -p 169.254.2.19:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:0efd7f6b-332a-4993-82be-89a9df6aebbc -p 169.254.2.29:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:0efd7f6b-332a-4993-82be-89a9df6aebbc -p 169.254.2.29:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:23cb4a14-a1de-49ad-ae2f-43a13b57486a -p 169.254.2.22:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:23cb4a14-a1de-49ad-ae2f-43a13b57486a -p 169.254.2.22:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:dcbcb1c8-375e-43ce-be0c-2be8aeef6f85 -p 169.254.2.11:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:dcbcb1c8-375e-43ce-be0c-2be8aeef6f85 -p 169.254.2.11:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:92dd8789-d008-4273-adb4-16b3194d7ac1 -p 169.254.2.8:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:92dd8789-d008-4273-adb4-16b3194d7ac1 -p 169.254.2.8:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:89b4f800-a068-4a7f-953c-3c2800647f37 -p 169.254.2.27:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:89b4f800-a068-4a7f-953c-3c2800647f37 -p 169.254.2.27:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:d5cc28dd-30ec-488e-83fb-1688e2e19559 -p 169.254.2.23:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:d5cc28dd-30ec-488e-83fb-1688e2e19559 -p 169.254.2.23:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:672f71cb-d11c-478f-b70b-ed9e24afa13d -p 169.254.2.2:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:672f71cb-d11c-478f-b70b-ed9e24afa13d -p 169.254.2.2:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7793bd9c-85c9-4576-838a-9faee7cb3080 -p 169.254.2.30:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7793bd9c-85c9-4576-838a-9faee7cb3080 -p 169.254.2.30:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:21113a2e-6f97-4c76-a8e4-82d38a41301a -p 169.254.2.12:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:21113a2e-6f97-4c76-a8e4-82d38a41301a -p 169.254.2.12:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:8471eb5a-6975-4c68-8200-2b55efe2de4d -p 169.254.2.3:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:8471eb5a-6975-4c68-8200-2b55efe2de4d -p 169.254.2.3:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e5bf722b-8d06-4641-9322-ca34bcaa26c8 -p 169.254.2.20:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e5bf722b-8d06-4641-9322-ca34bcaa26c8 -p 169.254.2.20:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e5f3fe41-b1fd-43fd-966f-29185821873f -p 169.254.2.7:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e5f3fe41-b1fd-43fd-966f-29185821873f -p 169.254.2.7:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:7235c1c1-5fcb-4e99-911f-794044fb3556 -p 169.254.2.25:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:7235c1c1-5fcb-4e99-911f-794044fb3556 -p 169.254.2.25:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:e43f8f7f-c6a7-47e6-a95b-07f330a04a2a -p 169.254.2.10:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:e43f8f7f-c6a7-47e6-a95b-07f330a04a2a -p 169.254.2.10:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:61898e60-b90c-4036-9ba3-565dfbf7e8e5 -p 169.254.2.31:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:61898e60-b90c-4036-9ba3-565dfbf7e8e5 -p 169.254.2.31:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:aabb68c7-1792-4d88-9889-f6a43dce9772 -p 169.254.2.21:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:aabb68c7-1792-4d88-9889-f6a43dce9772 -p 169.254.2.21:3260
+sleep 4s
+sudo iscsiadm -m node -T  iqn.2015-12.com.oracleiaas:51165007-d703-40d3-aaab-aeec56eb666d -p 169.254.2.24:3260 -u
+sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:51165007-d703-40d3-aaab-aeec56eb666d -p 169.254.2.24:3260
+sleep 4s

@@ -1,0 +1,107 @@
+
+#  availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[var.availability_domain - 1],"name")}"
+
+# availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[((count.index % 2 == 0) ? local.site1 : local.site2)],"name")}"
+#  availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[((floor(count.index / var.nsd_nodes_per_pool) % 2 == 0) ? local.site1 : local.site2)],"name")}"
+
+
+# [((floor(count.index / var.block_volumes_per_pool) % 2 == 0) ? local.site1 : local.site2)],"name")}"
+
+/*
+  metadata = {
+    ssh_authorized_keys = "${var.ssh_public_key}"
+    user_data = "${base64encode(data.template_file.boot_script.rendered)}"
+  }
+*/
+
+#"privateBSubnetsFQDN=\"(local.dual_nics ? ${oci_core_virtual_network.gpfs.dns_label}.oraclevcn.com ${oci_core_subnet.privateb.*.dns_label[0]}.${oci_core_virtual_network.gpfs.dns_label}.oraclevcn.com)\"",
+
+#  availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[var.availability_domain - 1],"name")}"
+# latest is below
+#availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[((count.index % 2 == 0) ? local.site1 : local.site2)],"name")}"
+
+
+/*
+data "template_file" "boot_script" {
+  template =  "${file("${var.scripts_directory}/boot.sh.tpl")}"
+  vars = {
+    version = var.spectrum_scale["version"]
+    downloadUrl = var.spectrum_scale["download_url"]
+    sshPrivateKey = var.ssh_private_key
+    sshPublicKey = var.ssh_public_key
+    totalNsdNodePools = var.total_nsd_node_pools
+    nsdNodesPerPool = var.nsd_nodes_per_pool
+    nsdNodeCount = (var.total_nsd_node_pools * var.nsd_nodes_per_pool)
+    nsdNodeHostnamePrefix = var.nsd_node["hostname_prefix"]
+    clientNodeCount = var.client_node["node_count"]
+    clientNodeHostnamePrefix = var.client_node["hostname_prefix"]
+    blockSize=var.spectrum_scale["block_size"]
+    dataReplica=var.spectrum_scale["data_replica"]
+    metadataReplica=var.spectrum_scale["metadata_replica"]
+    gpfsMountPoint=var.spectrum_scale["gpfs_mount_point"]
+    sharedDataDiskCount=(var.total_nsd_node_pools * var.block_volumes_per_pool)
+    installerNode = "${var.nsd_node["hostname_prefix"]}${var.installer_node}"
+    privateSubnetsFQDN = "${oci_core_virtual_network.gpfs.dns_label}.oraclevcn.com ${oci_core_subnet.private.*.dns_label[0]}.${oci_core_virtual_network.gpfs.dns_label}.oraclevcn.com"
+    privateBSubnetsFQDN = "${oci_core_virtual_network.gpfs.dns_label}.oraclevcn.com ${oci_core_subnet.privateb.*.dns_label[0]}.${oci_core_virtual_network.gpfs.dns_label}.oraclevcn.com"
+    companyName=var.callhome["company_name"]
+    companyID=var.callhome["company_id"]
+    countryCode=var.callhome["country_code"]
+    emailaddress=var.callhome["emailaddress"]
+  }
+}
+*/
+
+
+
+/*
+ "oci compute volume-attachment attach --type iscsi --is-shareable true  --instance-id  ${oci_core_instance.nsd_node[(b+(a*var.nsd_nodes_per_pool))].id}  --volume-id ${oci_core_volume.shared_data_block_volume[(var.nsd_nodes_per_pool_list*(c+(a*var.block_volumes_per_pool)))].id} --device ${var.volume_attach_device_mapping[(c)]}  --config-file ~/.oci/config ;sleep 81s; "
+*/
+
+
+
+#  availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[var.availability_domain - 1],"name")}"
+# last used is below
+# availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[((count.index % 2 == 0) ? local.site1 : local.site2)],"name")}"
+# availability_domains[((floor(count.index / var.block_volumes_per_pool) % 2 == 0) ? local.site1 : local.site2)],"name")}"
+
+# search oci_core_virtual_network.gpfs.dns_label.oraclevcn.com oci_core_subnet.privateb.*.dns_label[0].oci_core_virtual_network.gpfs.dns_label.oraclevcn.com gpfs.oraclevcn.com private0.gpfs.oraclevcn.com
+
+
+# Recommended for SAS Grid Shared File System - use 3 nsd_nodes_per_pool and 30 block_volumes_per_pool for max throughput
+#variable "total_nsd_node_pools" { default="1" }
+#variable "nsd_nodes_per_pool" { default="3" }
+#variable "block_volumes_per_pool" { default="30" }
+
+##command="mmcrcluster -N node.stanza -r /usr/bin/ssh -R /usr/bin/scp -C ss-demo01.privateb2.ibmssvcnv3.oraclevcn.com -A"
+##`$command`
+##while [ $? -ne 0 ]; do
+##echo "retry..."
+##sleep 10s;
+##`$command`
+##done;
+
+
+# below not working, hence consolidating all nsd stanza files
+# Create a file system fs1 using the first NSD stanza.
+# Add additional NSDs to the existing filesystem fs1
+###for poolIndex in `seq 1 $totalNsdNodePools`;
+###do
+###if [ $poolIndex -eq 1 ]; then
+###echo "mmcrfs fs1  -F /tmp/nsd.stanza.sv${nsdNodesPerPool}.set${poolIndex} -B $blockSize -m 2 -M 2 -r 2 -R 2"
+###mmcrfs fs1  -F /tmp/nsd.stanza.sv${nsdNodesPerPool}.set${poolIndex} -B $blockSize -m 2 -M 2 -r 2 -R 2
+###sleep 120s
+###else
+###echo "mmadddisk -F /tmp/nsd.stanza.sv${nsdNodesPerPool}.set${poolIndex}  "
+###mmadddisk -F /tmp/nsd.stanza.sv${nsdNodesPerPool}.set${poolIndex}
+###sleep 60s
+###fi
+###done
+
+
+
+#KERNALVERSION=`uname -a  | gawk -F" " '{ print $3 }' | sed "s|.x86_64||g"`
+#sudo yum install kernel-devel-$KERNALVERSION  -y
+#yum install kernel-headers-$KERNALVERSION -y
+#yum install gcc gcc-c++ -y
+
+

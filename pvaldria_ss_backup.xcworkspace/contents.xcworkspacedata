@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:benchmark_shared_disk_nsd_server_model_scripts/part1.sh">
+   </FileRef>
+   <FileRef
+      location = "group:add_more_nodes">
+   </FileRef>
+   <FileRef
+      location = "group:benchmark_shared_disk_nsd_server_model">
+   </FileRef>
+   <FileRef
+      location = "group:benchmark_shared_disk_nsd_server_model_scripts">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/pvaldria/git_repos/pvaldria/oci-ibm-spectrum-scale_backup/network_shared_disk_server_model">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/pvaldria/git_repos/pvaldria/oci-ibm-spectrum-scale_backup/network_shared_disk_server_model_scripts">
+   </FileRef>
+</Workspace>
