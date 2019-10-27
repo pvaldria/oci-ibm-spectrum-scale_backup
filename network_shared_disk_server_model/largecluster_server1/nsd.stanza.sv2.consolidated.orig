@@ -1,0 +1,1936 @@
+
+%nsd: nsd=nsd1
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd2
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd3
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd4
+device=/dev/oracleoci/oraclevde
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd5
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd6
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd7
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd8
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd9
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd10
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd11
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd12
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd13
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd14
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd15
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd16
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd17
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd18
+device=/dev/oracleoci/oraclevds
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd19
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd20
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd21
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-1,ss-server-2
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd22
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-2,ss-server-1
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd23
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd24
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd25
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd26
+device=/dev/oracleoci/oraclevde
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd27
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd28
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd29
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd30
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd31
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd32
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd33
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd34
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd35
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd36
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd37
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd38
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd39
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd40
+device=/dev/oracleoci/oraclevds
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd41
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd42
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd43
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-3,ss-server-4
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd44
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-4,ss-server-3
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd45
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd46
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd47
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd48
+device=/dev/oracleoci/oraclevde
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd49
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd50
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd51
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd52
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd53
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd54
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd55
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd56
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd57
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd58
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd59
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd60
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd61
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd62
+device=/dev/oracleoci/oraclevds
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd63
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd64
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd65
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-5,ss-server-6
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd66
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-6,ss-server-5
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd67
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd68
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd69
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd70
+device=/dev/oracleoci/oraclevde
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd71
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd72
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd73
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd74
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd75
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd76
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd77
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd78
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd79
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd80
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd81
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd82
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd83
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd84
+device=/dev/oracleoci/oraclevds
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd85
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd86
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd87
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-7,ss-server-8
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd88
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-8,ss-server-7
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd89
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd90
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd91
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd92
+device=/dev/oracleoci/oraclevde
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd93
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd94
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd95
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd96
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd97
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd98
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd99
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd100
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd101
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd102
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd103
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd104
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd105
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd106
+device=/dev/oracleoci/oraclevds
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd107
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd108
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd109
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd110
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd111
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd112
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd113
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd114
+device=/dev/oracleoci/oraclevde
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd115
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd116
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd117
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd118
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd119
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd120
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd121
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd122
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd123
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd124
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd125
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd126
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd127
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd128
+device=/dev/oracleoci/oraclevds
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd129
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd130
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd131
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-11,ss-server-12
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd132
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-12,ss-server-11
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd133
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd134
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd135
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd136
+device=/dev/oracleoci/oraclevde
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd137
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd138
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd139
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd140
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd141
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd142
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd143
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd144
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd145
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd146
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd147
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd148
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd149
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd150
+device=/dev/oracleoci/oraclevds
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd151
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd152
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd153
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-13,ss-server-14
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd154
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-14,ss-server-13
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd155
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd156
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd157
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd158
+device=/dev/oracleoci/oraclevde
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd159
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd160
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd161
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd162
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd163
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd164
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd165
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd166
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd167
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd168
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd169
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd170
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd171
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd172
+device=/dev/oracleoci/oraclevds
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd173
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd174
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd175
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-15,ss-server-16
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd176
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-16,ss-server-15
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd177
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd178
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd179
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd180
+device=/dev/oracleoci/oraclevde
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd181
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd182
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd183
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd184
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd185
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd186
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd187
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd188
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd189
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd190
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd191
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd192
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd193
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd194
+device=/dev/oracleoci/oraclevds
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd195
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd196
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd197
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-17,ss-server-18
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd198
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-18,ss-server-17
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd199
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd200
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd201
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd202
+device=/dev/oracleoci/oraclevde
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd203
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd204
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd205
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd206
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd207
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd208
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd209
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd210
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd211
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd212
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd213
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd214
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd215
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd216
+device=/dev/oracleoci/oraclevds
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd217
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd218
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd219
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-19,ss-server-20
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd220
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-20,ss-server-19
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd221
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd222
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd223
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd224
+device=/dev/oracleoci/oraclevde
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd225
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd226
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd227
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd228
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd229
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd230
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd231
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd232
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd233
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd234
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd235
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd236
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd237
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd238
+device=/dev/oracleoci/oraclevds
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd239
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd240
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd241
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+
+
+
+%nsd: nsd=nsd242
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+
+

@@ -1,0 +1,7 @@
+#
+# Identify eligible SCSI disks by the absence of a SWAP partition.
+# The only attribute that should possibly be changed is max_sectors_kb,
+# up to a value of 8192, depending on what the SCSI driver and disks support.
+#
+ACTION=="add|change", SUBSYSTEM=="block", KERNEL=="sd*[^0-9]", PROGRAM="/usr/bin/lsblk -rno FSTYPE,MOUNTPOINT,NAME /dev/%k", RESULT!="*SWAP*", ATTR{queue/scheduler}="deadline", ATTR{queue/nr_requests}="256", ATTR{device/queue_depth}="31", ATTR{queue/max_sectors_kb}="8192", ATTR{queue/read_ahead_kb}="0", ATTR{queue/rq_affinity}="2"
+

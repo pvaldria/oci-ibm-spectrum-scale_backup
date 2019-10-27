@@ -1,4 +1,101 @@
 
+less terraform.tfstate | grep -B30 shape | grep -v user_data | less
+
+
+GUI install
+if GUI count > 0 , then on GUI node run:
+mmperfmon config generate --collectors=ss-mgmt-gui-1.privateb0.gpfs.oraclevcn.com, ss-mgmt-gui-2.privateb0.gpfs.oraclevcn.com
+mmperfmon config show
+mmchnode --perfmon -N all
+mmlscluster
+systemctl start gpfsgui
+systemctl status gpfsgui
+
+
+mmperfmon query compareNodes cpu
+systemctl start gpfsgui
+systemctl status gpfsgui
+
+
+echo "get metrics mem_active, cpu_idle, gpfs_ns_read_ops, last 10 bucket_size 1" | /opt/IBM/zimon/zc 127.0.0.1
+
+more /opt/IBM/zimon/ZIMonCollector.cfg
+
+/usr/lpp/mmfs/gui/cli/lsnode
+
+******** Post Deploy Step:  *************
+Create GUI user after starting service.
+
+Welcome to IBM Spectrum Scale
+Before you get started with the IBM Spectrum Scale GUI, you need to create the first GUI user.
+Switch to the command line interface on the GUI node and run the following command to create the first user:
+
+/usr/lpp/mmfs/gui/cli/mkuser admin -g SecurityAdmin
+Use admin001 as password.
+Welcome to IBM Spectrum Scale
+Before you get started with the IBM Spectrum Scale GUI, you need to create the first GUI user.
+Switch to the command line interface on the GUI node and run the following command to create the first user:
+
+One of them is "Master GUI Node" , other is just "GUI Node"
+[root@ss-mgmt-gui-1 ~]# /usr/lpp/mmfs/gui/cli/lsnode
+Hostname                                   IP        Description     Role       Product version Connection status GPFS status Last updated
+ss-ces-nic1-1.privateb0.gpfs.oraclevcn.com 10.0.6.6                  ces        5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:08 PM
+ss-ces-nic1-2.privateb0.gpfs.oraclevcn.com 10.0.6.7                  ces        5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:08 PM
+ss-mgmt-gui-1.privateb0.gpfs.oraclevcn.com 10.0.6.11 Master GUI Node management 5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:07 PM
+ss-server-1.privateb0.gpfs.oraclevcn.com   10.0.6.4                  storage    5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:07 PM
+ss-server-2.privateb0.gpfs.oraclevcn.com   10.0.6.5                  storage    5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:07 PM
+EFSSG1000I The command completed successfully.
+[root@ss-mgmt-gui-1 ~]#
+
+[root@ss-mgmt-gui-1 ~]# ssh ss-mgmt-gui-2
+Last login: Sat Oct  5 18:32:48 2019 from ss-server-1.privateb0.gpfs.oraclevcn.com
+[root@ss-mgmt-gui-2 ~]# /usr/lpp/mmfs/gui/cli/lsnode
+Hostname                                   IP        Description Role       Product version Connection status GPFS status Last updated
+ss-ces-nic1-1.privateb0.gpfs.oraclevcn.com 10.0.6.6              ces        5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:08 PM
+ss-ces-nic1-2.privateb0.gpfs.oraclevcn.com 10.0.6.7              ces        5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:08 PM
+ss-mgmt-gui-2.privateb0.gpfs.oraclevcn.com 10.0.6.10 GUI Node    management 5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:07 PM
+ss-server-1.privateb0.gpfs.oraclevcn.com   10.0.6.4              storage    5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:07 PM
+ss-server-2.privateb0.gpfs.oraclevcn.com   10.0.6.5              storage    5.0.3.2         HEALTHY           HEALTHY     10/5/19 6:07 PM
+EFSSG1000I The command completed successfully.
+[root@ss-mgmt-gui-2 ~]#
+
+
+
+
+********************************************
+
+Below is the instruction to deploy the protocol node - I will not show you the protocol user authentication for CIFS because it require the Active Directory and the AD has to have RFC2307 schema implemented.
+
+Below steps need to be inserted just before configure the Zimon sensors:
+
+Install additional dependencies for the protocol.
+[root@prot01 ~]# yum install nfs-utils bind-utils  (for Active Directory integration)
+[root@prot01 ~]# yum install nfs-utils openldap-client sssd-common sssd-ldap   (for LDAP integration)
+Create the CES shared root directory.
+[root@prot01 ~]# mmchconfig cesSharedRoot=/gpfs/fs1/cesfs
+Modify the cluster configuration for protocol service.
+[root@prot01 ~]# mmchconfig profile=gpfsProtocolDefaults
+Enable CES on protocol nodes.
+[root@prot01 ~]# mmchnode --ces-enable -N prot01,prot02
+Change the file system ACL semantic, and remount the filesystem in order to reflect the change.
+[root@prot01 ~]# mmchfs fs1 -k nfs4
+[root@prot01 ~]# mmumount fs1 -a
+[root@prot01 ~]# mmmount fs1 -a
+Startup the protocol nodes.
+[root@prot01 ~]# mmstartup -N cesNodes
+Add the virtual IP addresses to the CES IP address pool.
+[root@prot01 ~]# mmces address add --ces-ip 10.0.7.101,10.0.7.102
+Enable NFS/SMB services.
+[root@prot01 ~]# mmces service enable NFS
+[root@prot01 ~]# mmces service enable SMB
+Configure the user-defined authentication for the protocol service.
+[root@prot01 ~]# mmuserauth service create --data-access-method file --type userdefined
+Create the CES export.
+[root@scproto5011 ~]# mmcrfileset fs1 gpfsHome
+[root@scproto5011 ~]# mmlinkfileset fs1 gpfsHome -J /gpfs/fs1/home
+
+
+
 #  availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[var.availability_domain - 1],"name")}"
 
 # availability_domain = "${lookup(data.oci_identity_availability_domains.ADs.availability_domains[((count.index % 2 == 0) ? local.site1 : local.site2)],"name")}"

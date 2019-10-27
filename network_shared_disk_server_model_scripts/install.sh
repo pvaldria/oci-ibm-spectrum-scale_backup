@@ -26,6 +26,11 @@ companyName=\"$companyName\"
 companyID=\"$companyID\"
 countryCode=\"$countryCode\"
 emailaddress=\"$emailaddress\"
+cesNodeCount=\"$cesNodeCount\"
+cesNodeHostnamePrefix=\"$cesNodeHostnamePrefix\"
+mgmtGuiNodeCount=\"$mgmtGuiNodeCount\"
+mgmtGuiNodeHostnamePrefix=\"$mgmtGuiNodeHostnamePrefix\"
+privateProtocolSubnetFQDN=\"$privateProtocolSubnetFQDN\"
 " > /tmp/gpfs_env_variables.sh
 
 echo "installerNode = $installerNode"
@@ -39,16 +44,16 @@ chmod 640 ~/.ssh/authorized_keys
 sleep 60s
 
 
-#######################################################"
-#################   Update resolv.conf  ###############"
-#######################################################"
+#   Update resolv.conf  #
 ## Modify resolv.conf to ensure DNS lookups work from one private subnet to another subnet
 mv /etc/resolv.conf /etc/resolv.conf.backup
 echo `hostname` | grep -q $clientNodeHostnamePrefix
 if [ $? -eq 0 ] ; then
   echo "search ${privateBSubnetsFQDN}" > /etc/resolv.conf
   echo "nameserver 169.254.169.254" >> /etc/resolv.conf
-else 
+fi
+echo `hostname` | grep -q $nsdNodeHostnamePrefix
+if [ $? -eq 0 ] ; then
   echo "search ${privateBSubnetsFQDN} ${privateSubnetsFQDN} " > /etc/resolv.conf
   echo "nameserver 169.254.169.254" >> /etc/resolv.conf
 fi
@@ -66,24 +71,31 @@ cat /etc/oci-hostname.conf
 chattr +i /etc/resolv.conf
 
 
-#######################################################"
-#################   configure 2nd NIC   ###############"
-#######################################################"
+#   configure 2nd NIC   #
 echo `hostname` | grep -q $clientNodeHostnamePrefix
 if [ $? -eq 0 ] ; then
   echo "client nodes - get hostname..."
   thisFQDN=`hostname --fqdn`
   thisHost=${thisFQDN%%.*}
 else
-  ifconfig | grep "^eno3d1:\|^enp70s0f1d1:"
+ifconfig | grep "^eno3d1:\|^enp70s0f1d1:\|^eno2d1:"
   if [ $? -eq 0 ] ; then
     echo "2 NIC setup"
     ifconfig | grep "^enp70s0f1d1:"
-      if [ $? -eq 0 ] ; then
-        interface="enp70s0f1d1"
-      else
-        interface="eno3d1"
-      fi
+    if [ $? -eq 0 ] ; then
+      interface="enp70s0f1d1"
+    fi
+
+    ifconfig | grep "^eno3d1:"
+    if [ $? -eq 0 ] ; then
+      interface="eno3d1"
+    fi
+    # AMD BM.Standard.E2.64 shape
+    ifconfig | grep "^eno2d1:"
+    if [ $? -eq 0 ] ; then
+      interface="eno2d1"
+    fi
+
 
       ip route
       ifconfig
@@ -118,8 +130,20 @@ IPADDR=$privateIp
 NETMASK=255.255.255.0
 MTU=9000
 NM_CONTROLLED=no
-ETHTOOL_OPTS=\"-G ${interface} rx 2047 tx 2047 rx-jumbo 8191; -L ${interface} combined 74\"
 " > /etc/sysconfig/network-scripts/ifcfg-$interface
+
+# Check if processor is Intel or AMD
+lscpu | grep "Vendor ID:"  | grep "AuthenticAMD"
+if [ $? -eq 0 ];  then
+  echo AMD
+  # Do nothing. Use default
+else
+  echo Intel
+  # The below are only applicable to Intel shapes, not for AMD shapes, it degrades n/w performance on AMD
+  echo "ETHTOOL_OPTS=\"-G ${interface} rx 2047 tx 2047 rx-jumbo 8191; -L ${interface} combined 74\"" >> /etc/sysconfig/network-scripts/ifcfg-$interface
+fi
+
+
 
 
       systemctl status network.service
@@ -144,9 +168,7 @@ ETHTOOL_OPTS=\"-G ${interface} rx 2047 tx 2047 rx-jumbo 8191; -L ${interface} co
 fi
 
 
-#######################################################"
-########  configure 1st NIC for performance   #########"
-#######################################################"
+#  configure 1st NIC for performance   #
 # First NIC names
 # eno2  & ens3
 ifconfig | grep "^eno2:"
@@ -159,37 +181,48 @@ if [ $? -eq 0 ] ; then
   primaryNICInterface="ens3"
 fi
 
-echo "MTU=9000" >> /etc/sysconfig/network-scripts/ifcfg-$primaryNICInterface
-echo "NM_CONTROLLED=no" >> /etc/sysconfig/network-scripts/ifcfg-$primaryNICInterface
-echo "ETHTOOL_OPTS=\"-G ${primaryNICInterface} rx 2047 tx 2047 rx-jumbo 8191; -L ${primaryNICInterface} combined 74\" " >> /etc/sysconfig/network-scripts/ifcfg-$primaryNICInterface
+ifconfig | grep "^enp70s0f0:"
+if [ $? -eq 0 ] ; then
+  primaryNICInterface="enp70s0f0"
+fi
 
-#######################################################"
+ifconfig | grep "^eno1:"
+if [ $? -eq 0 ] ; then
+  primaryNICInterface="eno1"
+fi
+
+# Check if processor is Intel or AMD
+lscpu | grep "Vendor ID:"  | grep "AuthenticAMD"
+if [ $? -eq 0 ];  then
+  echo AMD
+  # Do nothing. Use default
+else
+  echo Intel
+  # The below are only applicable to Intel shapes, not for AMD shapes, it degrades n/w performance on AMD
+  echo "ethtool -G $primaryNICInterface rx 2047 tx 2047 rx-jumbo 8191" >> /etc/rc.local
+  # the below change applies to BM shapes and fails on VM shapes, but harmless to still run it
+  echo "ethtool -L $primaryNICInterface combined 74" >> /etc/rc.local
+  chmod +x /etc/rc.local
+
+fi
 
 
+#
 # Add host info to gpfs_env_variables.sh for other scripts to re-use
 echo "thisFQDN=\"$thisFQDN\"" >> /tmp/gpfs_env_variables.sh
 echo "thisHost=\"$thisHost\"" >> /tmp/gpfs_env_variables.sh
-
-#######################################################"
+#
 
 mv /etc/yum.repos.d/epel.repo  /etc/yum.repos.d/epel.repo.disabled
 mv /etc/yum.repos.d/epel-testing.repo  /etc/yum.repos.d/epel-testing.repo.disabled
 sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
 setenforce 0 
 
-
-
-###########################
 ### OS Performance tuning
-###########################
 
-echo "$thisHost" | grep -q  $nsdNodeHostnamePrefix
-if [ $? -eq 0 ] ; then
-
-  # The below applies for both compute and server nodes (storage)
-  cd /usr/lib/tuned/
-  cp -r throughput-performance/ gpfs-oci-performance
-
+# The below applies for both client and server nodes (storage)
+cd /usr/lib/tuned/
+cp -r throughput-performance/ gpfs-oci-performance
 
 echo "
 #
@@ -237,14 +270,36 @@ vm.dirty_background_ratio = 10
 vm.swappiness=30
 " > gpfs-oci-performance/tuned.conf
 
+cd -
 
-tuned-adm profile gpfs-oci-performance
+
+# before applying to client nodes, make sure they have enough memory.
+echo "$thisHost" | grep -q  $clientNodeHostnamePrefix
+if [ $? -eq 0 ] ; then
+  coreIdCount=`grep "^core id" /proc/cpuinfo | sort -u | wc -l` ; echo $coreIdCount
+  socketCount=`echo $(($(grep "^physical id" /proc/cpuinfo | awk '{print $4}' | sort -un | tail -1)+1))` ; echo $socketCount
+  if [ $((socketCount*coreIdCount)) -gt 4  ]; then
+    tuned-adm profile gpfs-oci-performance
+  else
+    # Client is using shape with less than 4 physical cores and less 30GB memory, above tuned profile requires atleast 16GB of vm.min_free_kbytes, hence don't apply tuning be default.  Let user evaluate what are valid values for such small compute shapes.
+    echo "skip profile tuning..."
+  fi ;
+fi;
+
+
+echo "$thisHost" | grep -q  $nsdNodeHostnamePrefix
+if [ $? -eq 0 ] ; then
+  tuned-adm profile gpfs-oci-performance
+fi
 
 # Display active profile
 tuned-adm active
-cd - 
-fi
 
+# only for client nodes
+echo "$thisHost" | grep -q  $clientNodeHostnamePrefix
+if [ $? -eq 0 ] ; then
+  echo off > /sys/devices/system/cpu/smt/control
+fi
 
 echo "$thisHost" | grep -q  $clientNodeHostnamePrefix
 if [ $? -eq 0 ] ; then
@@ -311,14 +366,7 @@ fi
 
 cd -
 
-
-###########################
 ### OS Performance tuning - END
-###########################
-
-
-
-
 
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
 sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/g' /etc/ssh/sshd_config
@@ -399,7 +447,6 @@ if [ $? -eq 0 ] ; then
 fi 
 
 ## Start SSHD to prevent remote execution during this process
-systemctl status sshd
 systemctl stop sshd
 systemctl status sshd
 
@@ -456,9 +503,7 @@ fi
 
 
 
-################################
 ### download spectrum scale ###
-###############################
 cd /tmp/
 curl -O $downloadUrl -s
 
@@ -514,8 +559,29 @@ enabled=1' > /etc/yum.repos.d/spectrum-scale.repo
 
 yum clean all
 yum makecache
-yum -y update
-yum -y install kernel-devel cpp gcc gcc-c++ binutils kernel-headers
+
+yum -y install  cpp gcc gcc-c++ binutils
+kernelVersion=`uname -a  | gawk -F" " '{ print $3 }' ` ; echo $kernelVersion
+yum install -y redhat-lsb-core
+lsb_release -a
+osVersion=`lsb_release -a | grep "Release:" | gawk -F" " '{ print $2 }' | gawk -F"." '{ print $1"."$2 }' ` ; echo $osVersion
+rpmDownloadURLPrefix="http://ftp.scientificlinux.org/linux/scientific/${osVersion}/x86_64/updates/security"
+curl -O ${rpmDownloadURLPrefix}/kernel-devel-${kernelVersion}.rpm
+curl -O ${rpmDownloadURLPrefix}/kernel-headers-${kernelVersion}.rpm
+# --oldpackage
+rpm -Uvh ${rpmDownloadURLPrefix}/kernel-devel-${kernelVersion}.rpm
+rpm -Uvh ${rpmDownloadURLPrefix}/kernel-headers-${kernelVersion}.rpm
+
+
+yum -y install psmisc numad numactl iperf3 dstat iproute automake autoconf git
+#yum -y update
+
+# For GUI node:
+#yum -y install gpfs.base gpfs.gpl gpfs.msg.en_US gpfs.gskit gpfs.license* gpfs.ext gpfs.crypto gpfs.compression gpfs.adv gpfs.gss.pmsensors gpfs.docs gpfs.java gpfs.kafka gpfs.librdkafka gpfs.gui gpfs.gss.pmcollector
+
+# For non-GUI node:
+yum -y install gpfs.base gpfs.gpl gpfs.msg.en_US gpfs.gskit gpfs.license* gpfs.ext gpfs.crypto gpfs.compression gpfs.adv gpfs.gss.pmsensors gpfs.docs gpfs.java gpfs.kafka gpfs.librdkafka
+
 sed -i '/distroverpkg/a exclude=kernel*' /etc/yum.conf
 
 

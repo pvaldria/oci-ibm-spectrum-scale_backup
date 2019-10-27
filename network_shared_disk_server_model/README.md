@@ -31,7 +31,11 @@ This is optional, but you can update the variables.tf to change compute shapes t
 
 Deploy using standard Terraform commands
 
-        terraform init && terraform plan && terraform apply
+        terraform init && terraform plan
+        
+Note:  run the apply command with -parallelism=3 to ensure the script does not fail due to too many request per minute threshold exceeded orw work with OCI account team/support team to increase threshold limits for your tenancy. 
+
+        terraform apply -parallelism=3     
 
 
 ## Terraform apply - output 

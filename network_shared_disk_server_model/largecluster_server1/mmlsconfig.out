@@ -1,0 +1,29 @@
+Configuration data for cluster ss-demo01.privateb2.ibmssvcnv3.oraclevcn.com:
+----------------------------------------------------------------------------
+clusterName ss-demo01.privateb2.ibmssvcnv3.oraclevcn.com
+clusterId 6353670582830996908
+autoload no
+dmapiFileHandleSize 32
+minReleaseLevel 5.0.3.0
+ccrEnabled yes
+cipherList AUTHONLY
+maxblocksize 16M
+maxMBpS 6250
+numaMemoryInterleave yes
+tscCmdPortRange 60000-61000
+[clientNodes]
+pagepool 96G
+[nsdNodes]
+pagepool 128G
+[common]
+workerThreads 1024
+[nsdNodes]
+maxFilesToCache 5M
+[clientNodes]
+maxFilesToCache 1M
+[common]
+adminMode central
+
+File systems in cluster ss-demo01.privateb2.ibmssvcnv3.oraclevcn.com:
+---------------------------------------------------------------------
+/dev/fs1

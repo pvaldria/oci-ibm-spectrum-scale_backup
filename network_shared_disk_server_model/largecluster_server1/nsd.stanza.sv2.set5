@@ -1,0 +1,198 @@
+
+%nsd: nsd=nsd89
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd90
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd91
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd92
+device=/dev/oracleoci/oraclevde
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd93
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd94
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd95
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd96
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd97
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd98
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd99
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd100
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd101
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd102
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd103
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd104
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd105
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd106
+device=/dev/oracleoci/oraclevds
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd107
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd108
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd109
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-9,ss-server-10
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd110
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-10,ss-server-9
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+

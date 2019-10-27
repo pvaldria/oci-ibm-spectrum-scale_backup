@@ -1,0 +1,1000 @@
+    2  ls /gpfs/fs1/fs2M/
+    3  ls /gpfs/fs1/fs2M/8x2nsdServers/
+    4  date
+    5  ls /gpfs/fs1/fs2M/8x2nsdServers/09-21-2019/
+    6  mv /gpfs/fs1/fs2M/8x2nsdServers/09-21-2019 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019
+    7  mv ior.out.fs2m_4ppn_pagepool128G_workerThreads1024 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/.
+    8  screen -r
+    9  exit
+   10  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#2 
+   11  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#2 
+   12  exit
+   13  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#2 
+   14  exit
+   15  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#2 
+   16  screen -r
+   17  ls
+   18  exit
+   19  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#3 
+   20  exit
+   21  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#3 
+   22  exit
+   23  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#3 
+   24  mv ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#3 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/.
+   25  screen -r
+   26  exit
+   27  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#4 
+   28  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#4 
+   29  mv ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#4 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/.
+   30  screen -r
+   31  exit
+   32  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 
+   33  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 
+   34  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 
+   35  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 
+   36  exit
+   37  ip addr
+   38  exit
+   39  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 
+   40  exit
+   41  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 
+   42  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 
+   43  grep MiB/sec ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 
+   44  mv ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/.
+   45  screen -r
+   46  exit
+   47  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5
+   48  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#4 
+   49  exit
+   50  cat ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#4 
+   51  mv ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#4 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#6
+   52  cd
+   53  ls
+   54  screen -r
+   55  exit
+   56  screen -r
+   57  cat ior.out.ss-compute-1 
+   58  exit
+   59  history | grep for
+   60  clear
+   61  for i in $(seq 8 4 120); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool128G_workerThreads1024
+   62  date
+   63  clear
+   64  for i in 16 32 40 60 64; do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#2
+   65  mv ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#2 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/.
+   66  for i in 20 60 72; do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#3
+   67  clear
+   68  for i in 60; do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#4
+   69  clear
+   70  for i in $(seq 84 4 120); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#5
+   71  clear
+   72  for i in 92; do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool128G_workerThreads1024_#4
+   73  screen -ls
+   74  clear
+   75  ls
+   76  for i in {1..16};do ssh ss-compute-${i} "/root/sas/iotest.sh -i 24 -t /gpfs/fs1/test${i} -b 4587520 -s 64" & done
+   77  history | grep mmdsh
+   78  mmdsh -N clientNodes 'mv /root/iotest.sh.results.24 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/iotest.sh.results.24.$(hostname -s)'
+   79  clear
+   80  grep "megebytes per" /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/iotest.sh.results.24.ss-compute-*
+   81  grep "megabytes per" /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/iotest.sh.results.24.ss-compute-*
+   82  vi /gpfs/fs1/ior.conf.cn
+   83  history | grep mmdsh
+   84  mmdsh -N clientNodes "rm -rf /root/iotest.sh-*"
+   85  ls
+   86  screen -ls
+   87  history | grep for 
+   88  history | grep mpirun
+   89  clear
+   90  for i in {1..1};do mmdsh -N ss-compute-${i} 'echo "$(hostname -f) slots=52" > /gpfs/fs1/hostsfile.single && /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n 2 -npernode 2 --hostfile /gpfs/fs1/hostsfile.single  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn  > /root/ior.out.$(hostname -s) && sleep 60';done
+   91  ls
+   92  exit
+   93  cat ior.out.ss-compute-1 
+   94  mv ior.out.ss-compute-1 /gpfs/fs1/fs2M/8x2nsdServers/09-22-2019/.
+   95  ls
+   96  screen -r
+   97  exit
+   98  screen -r
+   99  screen
+  100  cat ior.out.ss-compute-1 
+  101  exit
+  102  cat ior.out.ss-compute-1 
+  103  mv ior.out.ss-compute-1 /gpfs/fs1/fs2M/9x2nsdServers/09-23-2019/.
+  104  screen -r
+  105  exit
+  106  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  107  exit
+  108  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  109  exit
+  110  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  111  exit
+  112  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  113  mv ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 /gpfs/fs1/fs2M/9x2nsdServers/09-23-2019/.
+  114  screen -r
+  115  exit
+  116  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  117  exit
+  118  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  119  cat ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  120  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  121  exit
+  122  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  123  cat ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  124  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  125  cat ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  126  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  127  exit
+  128  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  129  cat ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  130  exit
+  131  grep MiB/sec ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 
+  132  history | grep mv
+  133  mv ior.out.fs2m_4ppn_pagepool160G_workerThreads1024 /gpfs/fs1/fs2M/9x2nsdServers/09-23-2019/ior.out.fs2m_4ppn_pagepool160G_workerThreads1024_#2
+  134  ls
+  135  screen -r
+  136  ls
+  137  exit
+  138  mkdir /gpfs/fs1/fs2M/9x2nsdServers/
+  139  mkdir /gpfs/fs1/fs2M/9x2nsdServers/09-23-2019
+  140  date
+  141  clear
+  142  for i in {1..1};do mmdsh -N ss-compute-${i} 'echo "$(hostname -f) slots=52" > /gpfs/fs1/hostsfile.single && /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n 2 -npernode 2 --hostfile /gpfs/fs1/hostsfile.single  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn  > /root/ior.out.$(hostname -s) && sleep 60';done
+  143  clear
+  144  vi /gpfs/fs1/ior.conf.cn 
+  145  history | grep mpirun
+  146  clear
+  147  mmlsconfig
+  148  clear
+  149  for i in $(seq 8 4 120); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool160G_workerThreads1024
+  150  clear
+  151  for i in $(seq 8 4 120); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool160G_workerThreads1024
+  152  clear
+  153  for i in {1..18};do ssh ss-compute-${i} "/root/sas/iotest.sh -i 24 -t /gpfs/fs1/test${i} -b 4587520 -s 64" & done
+  154  history | grep rm
+  155  mmdsh -N clientNodes "rm -rf /root/iotest.sh-*"
+  156  ls
+  157  exit
+  158  history | grep mv
+  159  mmdsh -N clientNodes 'mv /root/iotest.sh.results.24 /gpfs/fs1/fs2M/9x2nsdServers/09-23-2019/iotest.sh.results.24.$(hostname -s)'
+  160  grep "megabytes per" /gpfs/fs1/fs2M/9x2nsdServers/09-23-2019/iotest.sh.results.24.*
+  161  ls
+  162  screen -r
+  163  exit
+  164  screen
+  165  cat ior.out.ss-compute-1 
+  166  exit
+  167  cat ior.out.ss-compute-1 
+  168  mv ior.out.ss-compute-1 /gpfs/fs1/fs2M/10x2nsdServers/09-24-2019/.
+  169  screen -r
+  170  exit
+  171  grep MiB/sec ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  172  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  173  exit
+  174  grep MiB/sec ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  175  date
+  176  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  177  mv ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 /gpfs/fs1/fs2M/10x2nsdServers/09-24-2019/.
+  178  screen -r
+  179  exit
+  180  grep MiB/sec ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  181  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  182  exit
+  183  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  184  grep MiB/sec ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  185  mv ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 /gpfs/fs1/fs2M/10x2nsdServers/09-24-2019/ior.out.fs2m_4ppn_pagepool192G_workerThreads1024_#2
+  186  screen -r
+  187  exit
+  188  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  189  mv ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 ior.out.fs2m_4ppn_pagepool192G_workerThreads1024_#3
+  190  screen -r
+  191  exit
+  192  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024
+  193  vi ior.out.fs2m_4ppn_pagepool192G_workerThreads1024_#3 
+  194  mv ior.out.fs2m_4ppn_pagepool192G_workerThreads1024_#3 /gpfs/fs1/fs2M/10x2nsdServers/09-24-2019/.
+  195  screen -r
+  196  exit
+  197  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  198  exit
+  199  grep MiB/sec ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  200  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  201  exit
+  202  grep MiB/sec ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  203  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  204  ps -ef
+  205  exit
+  206  grep MiB/sec ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  207  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  208  exit
+  209  grep MiB/sec ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  210  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  211  exit
+  212  vi /gpfs/fs1/ior.conf.cn
+  213  for i in {1..1};do mmdsh -N ss-compute-${i} 'echo "$(hostname -f) slots=52" > /gpfs/fs1/hostsfile.single && /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n 2 -npernode 2 --hostfile /gpfs/fs1/hostsfile.single  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn  > /root/ior.out.$(hostname -s) && sleep 60';done
+  214  clear
+  215  vi /gpfs/fs1/ior.conf.cn 
+  216  clear
+  217  for i in $(seq 8 4 120); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool192G_workerThreads1024
+  218  clear
+  219  for i in $(seq 8 4 120); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool192G_workerThreads1024
+  220  clear
+  221  for i in $(seq 88 4 88); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool192G_workerThreads1024
+  222  for i in $(seq 80 4 80); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool192G_workerThreads1024
+  223  clear
+  224  for i in $(seq 76 4 120); do /gpfs/fs1/openmpi-4.0.1/bin/mpirun --allow-run-as-root -n ${i} -npernode 4 --hostfile /gpfs/fs1/hostsfile.cn  /gpfs/fs1/ior-3.2.1/bin/ior -f /gpfs/fs1/ior.conf.cn && sleep 60;done | tee ior.out.fs2m_4ppn_pagepool192G_workerThreads1024
+  225  mv ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 /gpfs/fs1/fs2M/10x2nsdServers/09-24-2019/ior.out.fs2m_4ppn_pagepool192G_workerThreads1024_#4
+  226  ls
+  227  ps -ef
+  228  exit
+  229  cat ior.out.fs2m_4ppn_pagepool192G_workerThreads1024 
+  230  screen -r
+  231  ls
+  232  screen
+  233  exit
+  234  ls
+  235  history | grep mmdsh
+  236  mmdsh -N clientNodes 'mv /root/iotest.sh.results.24 /gpfs/fs1/fs2M/10x2nsdServers/09-24-2019/iotest.sh.results.24.$(hostname -s)'
+  237  ls
+  238  mmdsh -N clientNodes "rm -rf /root/iotest.sh-*"
+  239  ls
+  240  grep "megabytes per" /gpfs/fs1/fs2M/10x2nsdServers/09-24-2019/iotest.sh.results.24.*
+  241  ls
+  242  screen
+  243  exit
+  244  cd /gpfs/fs1
+  245  cd io-500-dev-master/
+  246  ls
+  247  clear
+  248  ./io500.sh 
+  249  exit
+  250  screen -ls
+  251  for i in {1..20};do ssh ss-compute-${i} "/root/sas/iotest.sh -i 24 -t /gpfs/fs1/test${i} -b 4587520 -s 64" & done
+  252  exit
+  253  screen -ls
+  254  rm -rf io500.2019.09.25-19.55.39
+  255  ls
+  256  exit
+  257  screen -r
+  258  screen -r 30690.pts-0.ss-compute-1
+  259  screen -r
+  260  ls
+  261  cd /gpfs/fs1/io-500-dev-master/
+  262  ls
+  263  df -h
+  264  cd results/
+  265  ls
+  266  mmlsfs fs1
+  267  mv 2019.09.25-19.55.39 10_building_block_m_2_r_1
+  268  ls
+  269  mv 2019.09.20-07.14.05 11_building_block_m_1_r_1
+  270  ls
+  271  mv 11_building_block_m_1_r_1 11xbuildBlock_m1_r1
+  272  mv 10_building_block_m_2_r_1 10xbuildBlock_m2_r1
+  273  ls
+  274  cd ../datafiles/
+  275  ls
+  276  screen
+  277  cd
+  278  ls
+  279  exit
+  280  screen
+  281  exit
+  282  screen -r
+  283  exit
+  284  cd /gpfs/fs1
+  285  cd io-500-dev-master/
+  286  ls
+  287  df -h
+  288  screen -ls
+  289  ./io500.sh 
+  290  date
+  291  ls
+  292  cd results/
+  293  ls
+  294  mv 2019.09.25-22.16.37 10xbuildBlock_m2_r2
+  295  ls
+  296  cd ../datafiles/
+  297  ls
+  298  rm -rf io500.2019.09.25-22.16.37
+  299  ls
+  300  cd
+  301  exit
+  302  screen -r
+  303  exit
+  304  screen
+  305  screen -r
+  306  exit
+  307  cd /gpfs/fs1/io-500-dev-master/
+  308  ls
+  309  ls results/
+  310  df -h
+  311  ./io500.sh
+  312  cd
+  313  mmlsconfig
+  314  exit
+  315  screen -r
+  316  screen -d 75178.pts-0.ss-compute-1
+  317  screen -r
+  318  exit
+  319  screen -r
+  320  df -h
+  321  exit
+  322  df -h
+  323  screen -ls
+  324  screen
+  325  exit
+  326  screen -r
+  327  exit
+  328  mmlsconfig
+  329  cd /gpfs/fs1
+  330  ls
+  331  cd io-500-dev-master/
+  332  ls
+  333  df -h
+  334  ./io500.sh 
+  335  cd results/
+  336  ls
+  337  mv 11xbuildBlock_m1_r1 11xbuildBlock_m1_r1_old
+  338  mv 2019.09.26-05.28.15 11xbuildBlock_m1_r1
+  339  ls
+  340  cd ../datafiles/
+  341  ls
+  342  rm -rf io500.2019.09.26-05.28.15
+  343  cd
+  344  exit
+  345  screen -r
+  346  exit
+  347  screen
+  348  exit
+  349  cd /gpfs/fs1/io-500-dev-master/
+  350  ls
+  351  rm -rf io500.2019.09.20-07.14.05.tar.gz 
+  352  ls
+  353  df -h
+  354  ./io500.sh 
+  355  cd results/
+  356  ls
+  357  mv 2019.09.26-12.52.20 11xbuildBlock_m2_r1
+  358  cd ../datafiles/
+  359  ls
+  360  rm -rf io500.2019.09.26-12.52.20/
+  361  exit
+  362  screen -r
+  363  cd
+  364  exit
+  365  df -h
+  366  exit
+  367  top
+  368  exit
+  369  screen -r
+  370  screen
+  371  exit
+  372  screen
+  373  exit
+  374  df -h
+  375  exit
+  376  screen -r
+  377  exit
+  378  cd /gpfs/fs1/io-500-dev-master/
+  379  ./io500.sh 
+  380  cd results/
+  381  ls
+  382  mv 2019.09.26-15.40.40 11xbuildBlock_m2_r2
+  383  ls
+  384  cd ../datafiles/
+  385  ls
+  386  rm -rf io500.2019.09.26-15.40.40/
+  387  cd
+  388  exit
+  389  screen -r
+  390  exit
+  391  cd /gpfs/fs1
+  392  ls
+  393  exit
+  394  screen
+  395  exit
+  396  screen
+  397  exit
+  398  screen -r
+  399  exit
+  400  cd /gpfs/fs1
+  401  ls
+  402  cd io-500-dev-master/
+  403  ./io500.sh 
+  404  cd results/
+  405  ls
+  406  mv 2019.09.26-19.56.23 9xbuildBlock_m1_r1
+  407  cd ../datafiles/
+  408  rm -rf io500.2019.09.26-19.56.23/
+  409  cd
+  410  exit
+  411  screen -r
+  412  exit
+  413  cd /gpfs/fs1/io-500-dev-master/
+  414  screen -ls
+  415  screen
+  416  exit
+  417  screen -r
+  418  exit
+  419  screen -r
+  420  w
+  421  exit
+  422  ./io500.sh 
+  423  cd results/
+  424  ls
+  425  mv 2019.09.26-22.54.43 9xbuildBlock_m2_r1
+  426  cd ../datafiles/
+  427  ls
+  428  rm -rf io500.2019.09.26-22.54.43
+  429  cd
+  430  exit
+  431  screen -r
+  432  exit
+  433  mmlsmount fs1
+  434  screen -ls
+  435  screen
+  436  exit
+  437  screen -r
+  438  exit
+  439  date
+  440  clear
+  441  screen -ls
+  442  clear
+  443  cd /gpfs/fs1/io-500-dev-master/
+  444  ./io500.sh 
+  445  cd results/
+  446  ls
+  447  mv 2019.09.27-01.20.58 9xbuildBlock_m2_r2
+  448  mkdir archives
+  449  mv 10xbuildBlock_m* archives/.
+  450  mv 11xbuildBlock_m* archives/.
+  451  ls
+  452  cd ../datafiles/
+  453  ls
+  454  rm -rf io500.2019.09.27-01.20.58
+  455  cd ../results/
+  456  pwd
+  457  cd
+  458  exit
+  459  screen -r
+  460  exit
+  461  screen 
+  462  exit
+  463  cd /gpfs/fs1/io-500-dev-master/
+  464  ls
+  465  ./io500.sh 
+  466  cd results/
+  467  ls
+  468  mv 2019.09.27-04.50.46 10xbuildBlock_m1_r1
+  469  cd ../datafiles/
+  470  ls
+  471  rm -rf io500.2019.09.27-04.50.46/
+  472  cd
+  473  exit
+  474  screen -r
+  475  exit
+  476  screen
+  477  exit
+  478  tail /var/adm/ras/mmfs.log.latest 
+  479  date
+  480  screen -r
+  481  exit
+  482  cd /gpfs/fs1
+  483  cd io-500-dev-master/
+  484  df -h
+  485  ./io500.sh 
+  486  mmlsfs fs1
+  487  cat results/2019.09.27-11.13.16/io-500-summary.2019.09.27-11.13.16.txt 
+  488  cd results/
+  489  ls
+  490  mv 2019.09.27-11.13.16 10xbuildBlock_m2_r1
+  491  cd ../datafiles/
+  492  rm -rf io500.2019.09.27-11.13.16/
+  493  cd
+  494  exit
+  495  screen -r
+  496  exit
+  497  screen 
+  498  exit
+  499  screen -r
+  500  cat /gpfs/fs1/io-500-dev-master/results/2019.09.27-14.04.54/io-500-summary.2019.09.27-14.04.54.txt 
+  501  exit
+  502  cd /gpfs/fs1
+  503  cd io-500-dev-master/
+  504  ls
+  505  ./io500.sh 
+  506  cd results/
+  507  ls
+  508  mv 2019.09.27-14.04.54 10xbuildBlock_m2_r2
+  509  ls
+  510  cd ../datafiles/
+  511  ls
+  512  rm -rf io500.2019.09.27-14.04.54/
+  513  exit
+  514  screen -r
+  515  exit
+  516  screen 
+  517  exit
+  518  cd /gpfs/fs1/io-500-dev-master/
+  519  ls
+  520  ls results/
+  521  clear
+  522  cat /var/adm/ras/mmfs.log.latest 
+  523  date
+  524  clear
+  525  ./io500.sh 
+  526  top
+  527  mmdsh -N clientNodes "pkill ior"
+  528  mmdsh -N clientNodes "pkill ior" | wc -l
+  529  clear
+  530  mmdsh -N clientNodes "pkill ior"
+  531  cd results/
+  532  ls
+  533  rm -rf 2019.09.27-17.37.18
+  534  cd ../datafiles/
+  535  ls
+  536  rm -rf io500.2019.09.27-17.37.18
+  537  df -h
+  538  exit
+  539  screen -r
+  540  df -h
+  541  exit
+  542  ps -ef | more
+  543  cd /gpfs/fs1/io-500-dev-master/
+  544  ls
+  545  cd datafiles/
+  546  ls
+  547  cd ../results/
+  548  ls
+  549  top
+  550  exit
+  551  screen
+  552  exit
+  553  cd /gpfs/fs1/io-500-dev-master/
+  554  ./io500.sh 
+  555  mmdsh -N clientNodes "pkill mdtest"
+  556  mmdsh -N clientNodes "pkill ior"
+  557  cd results/
+  558  ls
+  559  rm -rf 2019.09.27-17.44.22
+  560  cd ../datafiles/
+  561  ls
+  562  rm -rf io500.2019.09.27-17.44.22/
+  563  ls
+  564  ls io500.2019.09.27-17.44.22/
+  565  ls io500.2019.09.27-17.44.22/mdt_easy/
+  566  ls io500.2019.09.27-17.44.22/mdt_easy/#test-dir.0-0/
+  567  df -h
+  568  rm -rf io500.2019.09.27-17.44.22/
+  569  df -h
+  570  cd
+  571  exit
+  572  screen -r
+  573  exit
+  574  screen
+  575  exit
+  576  cd /gpfs/fs1/io-500-dev-master/
+  577  ls
+  578  ls results/
+  579  ./io500.sh 
+  580  ls
+  581  cd d
+  582  cd datafiles/
+  583  ls
+  584  rm -rf io500.2019.09.27-22.38.48/
+  585  cd ../results/
+  586  ls
+  587  rm -rf 2019.09.27-22.38.48
+  588  exit
+  589  screen -r
+  590  exit
+  591  screen -r
+  592  screen
+  593  exit
+  594  screen -r
+  595  exit
+  596  cd /gpfs/fs1/io-500-dev-master/
+  597  ls
+  598  ls reso
+  599  ls results/
+  600  ls
+  601  ./io500.sh 
+  602  mmdsh -N clientNodes "pkill ior"
+  603  clear
+  604  cd results/
+  605  ls
+  606  rm -rf 2019.09.28-0*
+  607  ls
+  608  mv archives/11xbuildBlock_m* .
+  609  ls
+  610  cd 
+  611  cd /gpfs/fs1/io-500-dev-master/datafiles/
+  612  ls
+  613  rm -rf io500.2019.09.28-0*
+  614  ls
+  615  exit
+  616  screen -r
+  617  exit
+  618  cd /gpfs/fs1
+  619  ls
+  620  df -h
+  621  exit
+  622  screen
+  623  exit
+  624  ls
+  625  cd /gpfs/fs1
+  626  ls
+  627  exit
+  628  ls
+  629  screen
+  630  exit
+  631  screen
+  632  exit
+  633  ls
+  634  screen -ls
+  635  cd /gpfs/fs1/io-500-dev-master/
+  636  ls
+  637  ./io500.sh
+  638  cd results/
+  639  ls
+  640  cat 9xbuildBlock_m1_r1/io-500-summary.2019.09.26-19.56.23.txt 
+  641  ls
+  642  mv 2019.09.28-08.28.55 8xbuildBlock_m1_r1
+  643  cat 8xbuildBlock_m1_r1/io-500-summary.2019.09.28-08.28.55.txt 
+  644  ls
+  645  ls archives/
+  646  ls
+  647  ethtool eno2
+  648  ethtool eno3d1
+  649  ls
+  650  systemctl status multipathd
+  651  exit
+  652  screen -r
+  653  exit
+  654  screen
+  655  exit
+  656  cd /gpfs/fs1/io-500-dev-master/
+  657  ls datafiles/
+  658  cd datafiles/
+  659  ls
+  660  rm -rf io500.2019.09.28-08.28.55
+  661  cd ../
+  662  l
+  663  sls
+  664  clear
+  665  ./io500.sh
+  666  exit
+  667  screen -r
+  668  cd
+  669  exit
+  670  screen
+  671  exit
+  672  cd /gpfs/fs1/io-500-dev-master/
+  673  ls
+  674  vi io500.sh
+  675  vi /gpfs/fs1/hostsfile.cn
+  676  ls
+  677  df -h
+  678  ./io500.sh
+  679  cd results/
+  680  ls
+  681  mv 2019.09.28-20.50.44 8xbuildBlock_m2_r1
+  682  ls
+  683  cd ../datafiles/
+  684  ls
+  685  rm -rf io500.2019.09.28-20.50.44/
+  686  cd
+  687  exit
+  688  screen -r
+  689  exit
+  690  screen
+  691  exit
+  692  cd /gpfs/fs1/io-500-dev-master/
+  693  ls
+  694  ./io500.sh
+  695  cd results/
+  696  ls
+  697  mv 2019.09.29-04.29.43 8xbuildBlock_m1_r1
+  698  ls
+  699  cd 8xbuildBlock_m1_r1/
+  700  ls
+  701  date
+  702  mv 2019.09.29-04.29.43 ../.
+  703  ls
+  704  cd ..
+  705  ls
+  706  mv 8xbuildBlock_m1_r1 archives/.
+  707  ls
+  708  mv 2019.09.29-04.29.43 8xbuildBlock_m1_r1
+  709  ls
+  710  cd 8xbuildBlock_m1_r1/
+  711  ls
+  712  cd ..
+  713  cd ../datafiles/
+  714  ls
+  715  rm -rf io500.2019.09.29-04.29.43
+  716  ps -ef
+  717  cd
+  718  exit
+  719  screen -r
+  720  exit
+  721  screen
+  722  exit
+  723  df -h
+  724  cd /gpfs/fs1/io-500-dev-master/
+  725  ls
+  726  ./io500.sh
+  727  cd results/
+  728  ls
+  729  mv 2019.09.29-14.13.18 8xbuildBlock_m2_r2
+  730  ls
+  731  cd ../datafiles/
+  732  rm -rf io500.2019.09.29-14.13.18
+  733  cd
+  734  ps -ef
+  735  exit
+  736  screen -r
+  737  exit
+  738  screen
+  739  exit
+  740  cd /gpfs/fs1
+  741  cd io-500-dev-master/
+  742  ./io500.sh
+  743  cd results/
+  744  ls
+  745  mv 2019.09.30-05.34.19 7xbuildBlock_m1_r1
+  746  cd ../datafiles/
+  747  ls
+  748  rm -rf io500.2019.09.30-05.34.19
+  749  ls
+  750  cd
+  751  exit
+  752  screen -r
+  753  exit
+  754  screen 
+  755  exit
+  756  cd /gpfs/fs1/io-500-dev-master/
+  757  ls
+  758  ./io500.sh
+  759  cd results/
+  760  ls
+  761  mv 2019.09.30-14.31.20 7xbuildBlock_m2_r1
+  762  ls
+  763  cd ../datafiles/
+  764  ls
+  765  rm -rf io500.2019.09.30-14.31.20/
+  766  ls
+  767  cd
+  768  exit
+  769  screen -r
+  770  exit
+  771  screen
+  772  exit
+  773  ps -ef
+  774  cd /gpfs/fs1/io-500-dev-master/
+  775  ls
+  776  ./io500.sh
+  777  cd results/
+  778  ls
+  779  mv 2019.09.30-16.46.20 7xbuildBlock_m2_r2
+  780  ls
+  781  cd ../datafiles/
+  782  ls
+  783  rm -rf io500.2019.09.30-16.46.20/
+  784  cd
+  785  ls
+  786  exit
+  787  screen -r
+  788  exit
+  789  mmfsadm dump config | grep pagepool
+  790  exit
+  791  screen
+  792  exit
+  793  cd /gpfs/fs1/io-500-dev-master/
+  794  ls
+  795  ./io500.sh
+  796  cd results/
+  797  ls
+  798  mv 2019.10.01-00.33.55 6xbuildBlock_m1_r1
+  799  cd ../datafiles/
+  800  rm -rf io500.2019.10.01-00.33.55
+  801  cd
+  802  exit
+  803  screen -r
+  804  exit
+  805  screen
+  806  exit
+  807  cd /gpfs/fs1
+  808  cd io-500-dev-master/
+  809  mmlsfs fs1
+  810  ./io500.sh
+  811  cd results/
+  812  ls
+  813  mv 6xbuildBlock_m1_r1 archives/.
+  814  mv 2019.10.01-03.49.25 6xbuildBlock_m1_r1
+  815  ls
+  816  cd ../datafiles/
+  817  ls
+  818  rm -rf io500.2019.10.01-03.49.25/
+  819  ls
+  820  cd
+  821  exit
+  822  screen -r
+  823  exit
+  824  screen
+  825  exit
+  826  cd /gpfs/fs1/io-500-dev-master/
+  827  ls
+  828  w
+  829  clear
+  830  ./io500.sh
+  831  cd results/
+  832  ls
+  833  mv 2019.10.01-05.48.46 6xbuildBlock_m2_r1
+  834  cd ../datafiles/
+  835  rm -rf io500.2019.10.01-05.48.46
+  836  cd
+  837  exit
+  838  screen -r
+  839  exit
+  840  screen 
+  841  exit
+  842  cd /gpfs/fs1/io-500-dev-master/
+  843  ls
+  844  ./io500.sh
+  845  ls
+  846  cd results/
+  847  ls
+  848  rm -rf 2019.10.01-12.28.25
+  849  cd ../datafiles/
+  850  rm -rf io500.2019.10.01-12.28.25
+  851  ls
+  852  cd
+  853  exit
+  854  screen -r
+  855  exit
+  856  screen
+  857  exit
+  858  cd /gpfs/fs1/io-500-dev-master/
+  859  ls
+  860  ls results/
+  861  clear
+  862  ./io500.sh
+  863  cd results/
+  864  ls
+  865  mv 6xbuildBlock_m2_r1 archives/.
+  866  mv 2019.10.02-02.46.00 6xbuildBlock_m2_r1
+  867  ls
+  868  ls archives/
+  869  mv 11xbuildBlock_m1_r1_old archives/.
+  870  ls
+  871  cd ../datafiles/
+  872  ls
+  873  rm -rf io500.2019.10.02-02.46.00
+  874  exit
+  875  screen -r
+  876  exit
+  877  screen
+  878  exit
+  879  ls
+  880  cd /gpfs/fs1/io-500-dev-master/
+  881  ls
+  882  ls datafiles/
+  883  ./io500.sh
+  884  cd results/
+  885  ls
+  886  mv 2019.10.02-05.11.12 6xbuildBlock_m2_r2
+  887  ls
+  888  cd ../datafiles/
+  889  ls
+  890  rm -rf io500.2019.10.02-05.11.12
+  891  exit
+  892  screen -r
+  893  exit
+  894  df -h
+  895  screen
+  896  exit
+  897  cd /gpfs/fs1/io-500-dev-master/
+  898  ls
+  899  ./io500.sh
+  900  exit
+  901  screen -r
+  902  exit
+  903  screen 
+  904  exit
+  905  w
+  906  cd /gpfs/fs1/io-500-dev-master/
+  907  ls
+  908  ./io500.sh
+  909  cd results/
+  910  ls
+  911  mv 2019.10.02-16.52.55 10xbuildBlock_m2_r1
+  912  ls
+  913  cd ../datafiles/
+  914  ls
+  915  rm -rf io500.2019.10.02-16.52.55/
+  916  exit
+  917  ls
+  918  screen -r
+  919  df -h
+  920  exit
+  921  df -h
+  922  exit
+  923  df -h
+  924  w
+  925  exit
+  926  w
+  927  screen
+  928  exit
+  929  cd /gpfs/fs1/io-500-dev-master/
+  930  ls results/
+  931  ls datafiles
+  932  ./io500.sh
+  933  ls
+  934  cd results/
+  935  ls
+  936  mv 2019.10.02-21.05.24 10xbuildBlock_m2_r2
+  937  ls
+  938  cd ../datafiles/
+  939  ls
+  940  rm -rf io500.2019.10.02-21.05.24
+  941  cd
+  942  exit
+  943  screen -r
+  944  exit
+  945  df -h
+  946  ls /gpfs/fs1
+  947  screen
+  948  exit
+  949  cd /gpfs/fs1/io-500-dev-master/
+  950  ls
+  951  ls datafiles/
+  952  ./io500.sh
+  953  cd results/
+  954  ls
+  955  mv 10xbuildBlock_m2_r2 archives/10xbuildBlock_m2_r2_#1
+  956  mv 2019.10.03-00.34.17 10xbuildBlock_m2_r2
+  957  ls
+  958  cd archives/
+  959  ls
+  960  rm -rf 10xbuildBlock_m2_r2_#1
+  961  ls
+  962  cd ..
+  963  ls
+  964  cd ../datafiles/
+  965  ls
+  966  rm -rf io500.2019.10.03-00.34.17
+  967  cd
+  968  exit
+  969  screen -r
+  970  exit
+  971  df -h
+  972  screen -ls
+  973  screen
+  974  exit
+  975  ls
+  976  cd /gpfs/fs1/
+  977  ll
+  978  cd io-500-dev-master/
+  979  ll
+  980  cd results/
+  981  ll
+  982  history | less 
+  983  cd ../
+  984  pwd
+  985  tar cvzf /home/opc/io500_all_results.tgz results/
+  986  pwd
+  987  cd ../
+  988  ls
+  989  tar cvzf /home/opc/io-500-dev-master.tgz io-500-dev-master/
+  990  rm /home/opc/io-500-dev-master.tgz 
+  991  tar cvzf --exclude='./io-500-dev-master/datafiles'  /home/opc/io-500-dev-master.tgz io-500-dev-master/
+  992  pwd
+  993  rm /home/opc/io-500-dev-master.tgz 
+  994  tar cvzf --exclude='./datafiles'  /home/opc/io-500-dev-master.tgz io-500-dev-master/
+  995  tar cvzf --exclude='/datafiles'  /home/opc/io-500-dev-master.tgz io-500-dev-master/
+  996  tar  --exclude='./io-500-dev-master/datafiles' -cvzf  /home/opc/io-500-dev-master.tgz io-500-dev-master/
+  997  rm /home/opc/io-500-dev-master.tgz 
+  998  tar  --exclude='io-500-dev-master/datafiles' -cvzf  /home/opc/io-500-dev-master.tgz io-500-dev-master/
+  999  scp /home/opc/*.tgz ss-server-5:/home/opc/
+ 1000  exit 
+ 1001  history > /home/opc/ss-compute-1.root.history.txt 

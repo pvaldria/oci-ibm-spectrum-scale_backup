@@ -1,0 +1,20 @@
+RESULTS
+-------
+
+INVOCATION            : iotest.sh -i 24 -t /gpfs/fs1/test0 -b 4587520 -s 64
+
+
+TARGET DETAILS
+  directory           : /gpfs/fs1/test0
+  df                  : fs1            18454937600 7232514048 11222423552      40% /gpfs/fs1
+  mount point         : fs11 on /gpfs/fs11 type gpfs (rw,relatime)
+  filesize            : 300647710720 bytes or 286720.00 megabytes
+
+
+STATISTICS
+  average read time in seconds     :  2296.74                     
+  average read throughput rate     :   124.83 megabytes per second
+  average write time in seconds    :  2881.54                     
+  average write throughput rate    :    99.50 megabytes per second
+
+

@@ -1,0 +1,198 @@
+
+%nsd: nsd=nsd221
+device=/dev/oracleoci/oraclevdb
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd222
+device=/dev/oracleoci/oraclevdc
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd223
+device=/dev/oracleoci/oraclevdd
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd224
+device=/dev/oracleoci/oraclevde
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd225
+device=/dev/oracleoci/oraclevdf
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd226
+device=/dev/oracleoci/oraclevdg
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd227
+device=/dev/oracleoci/oraclevdh
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd228
+device=/dev/oracleoci/oraclevdi
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd229
+device=/dev/oracleoci/oraclevdj
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd230
+device=/dev/oracleoci/oraclevdk
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd231
+device=/dev/oracleoci/oraclevdl
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd232
+device=/dev/oracleoci/oraclevdm
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd233
+device=/dev/oracleoci/oraclevdn
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd234
+device=/dev/oracleoci/oraclevdo
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd235
+device=/dev/oracleoci/oraclevdp
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd236
+device=/dev/oracleoci/oraclevdq
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd237
+device=/dev/oracleoci/oraclevdr
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd238
+device=/dev/oracleoci/oraclevds
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd239
+device=/dev/oracleoci/oraclevdt
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd240
+device=/dev/oracleoci/oraclevdu
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd241
+device=/dev/oracleoci/oraclevdv
+servers=ss-server-21,ss-server-22
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
+
+%nsd: nsd=nsd242
+device=/dev/oracleoci/oraclevdw
+servers=ss-server-22,ss-server-21
+usage=dataAndMetadata
+pool=system
+failureGroup=100
+
+
