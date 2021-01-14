@@ -49,54 +49,21 @@ resource "oci_core_security_list" "PublicSubnet" {
     compartment_id = "${var.compartment_ocid}"
     display_name = "Public Subnet"
     vcn_id = "${oci_core_virtual_network.ibmss_vcnv3.id}"
-    egress_security_rules = [{
+    egress_security_rules {
         destination = "0.0.0.0/0"
         protocol = "6"
-    }]
-/*
-    egress_security_rules = [{
-        destination = "${var.VPC-CIDR}"
-        protocol = "1"
-    }]
-*/
-    ingress_security_rules = [{
+    }
+
+    ingress_security_rules {
         tcp_options {
-            "max" = 22
-            "min" = 22
+            max = 22
+            min = 22
         }
         protocol = "6"
         source = "0.0.0.0/0"
-    }]
-/*    
-    ingress_security_rules = [{
-        protocol = "6"
-	source = "${var.VPC-CIDR}"
-    }]
-*/
-    /* For ping traffic between nodes 
-    ingress_security_rules = [{
-        protocol = "1"
-        source = "${var.VPC-CIDR}"
-        icmp_options {
-            #Required
-            type = "0"
+    }
 
-            #Optional
-            code = "0"
-        }
-    }]
-    ingress_security_rules = [{
-        protocol = "1"
-        source = "${var.VPC-CIDR}"
-        icmp_options {
-            #Required
-            type = "8"
 
-            #Optional
-            code = "0"
-        }
-    }]
-*/
 }
 
 
@@ -106,27 +73,27 @@ resource "oci_core_security_list" "PrivateSubnet" {
   display_name   = "Private"
   vcn_id         = "${oci_core_virtual_network.ibmss_vcnv3.id}"
 
-  egress_security_rules = [{
+  egress_security_rules {
     destination = "0.0.0.0/0"
     protocol    = "all"
-  }]
+  }
 
-  egress_security_rules = [{
+  egress_security_rules {
     protocol    = "all"
     destination = "${var.VPC-CIDR}"
-  }]
-  ingress_security_rules = [{
+  }
+  ingress_security_rules {
     tcp_options {
-      "max" = 22
-      "min" = 22
+      max = 22
+      min = 22
     }
     protocol = "6"
     source   = "${var.VPC-CIDR}"
-  }]
-  ingress_security_rules = [{
+  }
+  ingress_security_rules {
         protocol = "All"
         source = "${var.VPC-CIDR}"
-  }]
+  }
 
 }
 
